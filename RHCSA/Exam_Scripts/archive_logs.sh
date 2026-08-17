@@ -21,7 +21,7 @@ target_dir="$1"
 mkdir -p /backup
 dir_backup="/backup"
 
-find "$target_dir" -type f -name "*.log" -mtime -7 -exec cp {} /backup/ \;
+find "$target_dir" -type f -name "*.log" -mtime -7 -exec cp -t /backup {}+
 
 echo "[SUCCESS]"
 
