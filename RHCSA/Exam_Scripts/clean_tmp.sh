@@ -17,5 +17,5 @@ fi
 
 directory="$1"
 
-delete=$(find "$directory" -type -f -name "*.tmp" -exec rm -v {} \; | wc -l)
+delete=$(find "$directory" -type -f -name "*.tmp" -exec rm -v {} + | wc -l)
 echo "[OK] $delete FILES DELETED"
